@@ -4,7 +4,7 @@
         <span class="spacer"></span>
         <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
             <span>Hello {{user.displayName}}</span>
-            <button mar-button (click)="auth.logout()">Logout</button>
+            <button mat-button (click)="auth.logout()">Logout</button>
         </div>
         <ng-template #showLogin>
             <button mat-button (click)="auth.login()">Login with Google</button>
