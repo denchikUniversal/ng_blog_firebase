@@ -1,3 +1,26 @@
-<p>
-  post-dashboard works!
-</p>
+<section>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Create a Post
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      
+      <mat-form-field>
+          <input matInput placeholder="Post Title" [(ngModel)]="title">
+        </mat-form-field>    
+        <br>      
+        <mat-form-field>
+          <textarea matInput placeholder="Post Content" [(ngModel)]="content" rows="10"></textarea>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="accent" (click)="createPost()" [disabled]="!title || !content">Create Post</button>   
+
+    </mat-expansion-panel>     
+  </mat-accordion>
+</section>
+
+
+
+
