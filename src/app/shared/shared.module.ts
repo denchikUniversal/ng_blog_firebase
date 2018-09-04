@@ -8,12 +8,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports: [
     CommonModule,
     MaterialModule,
-    NavbarComponent
+    NavbarComponent,
+    RouterModule
   ],
   declarations: [NavbarComponent]
 })
