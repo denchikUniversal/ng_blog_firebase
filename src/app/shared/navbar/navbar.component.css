@@ -1,3 +1,12 @@
 .spacer {
     flex: 1 1;
 }
+
+span{
+    cursor: pointer;
+}
+
+span:focus{
+    outline: none;
+    border: 0;
+}

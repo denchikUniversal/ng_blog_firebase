@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule , Routes, Router } from '@angular/router';
+import { RouterModule , Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -17,8 +17,7 @@ import { SharedModule } from './shared/shared.module';
 import { PostsModule } from './posts/posts.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/blog', pathMatch: 'full' },
-  { path: '', loadChildren: './post/post.module#PostModule' }
+  { path: '', redirectTo: '/blog', pathMatch: 'full' }
 ]
 
 @NgModule({
