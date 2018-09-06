@@ -6,16 +6,29 @@
           Create a Post
         </mat-panel-title>
       </mat-expansion-panel-header>
+
+      <div>
+        <input type="file" name="file" id="file"
+        (change)="uploadImage($event)">
+        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        
+      </div>
       
       <mat-form-field>
-          <input matInput placeholder="Post Title" [(ngModel)]="title">
+          <input matInput placeholder="Post Title" 
+          [(ngModel)]="title">
         </mat-form-field>    
         <br>      
         <mat-form-field>
-          <textarea matInput placeholder="Post Content" [(ngModel)]="content" rows="10"></textarea>
+          <textarea matInput 
+          placeholder="Post Content" 
+          [(ngModel)]="content" 
+          rows="10"></textarea>
         </mat-form-field>
         <br>
-        <button mat-raised-button color="accent" (click)="createPost()" [disabled]="!title || !content">{{buttonText}}</button>   
+        <button mat-raised-button 
+        color="accent" (click)="createPost()" 
+        [disabled]="!title || !content">{{buttonText}}</button>   
 
     </mat-expansion-panel>     
   </mat-accordion>
