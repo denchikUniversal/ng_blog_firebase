@@ -19,3 +19,7 @@ mat-content-card:focus{
     outline: none;
     border: 0;
 }
+
+span{
+    font-weight: bold;
+}

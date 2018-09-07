@@ -4,6 +4,7 @@ import { PostService } from '../post.service';
 import { Observable } from 'rxjs';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { Router } from '@angular/router';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-post-dashboard',
@@ -53,12 +54,19 @@ export class PostDashboardComponent implements OnInit {
     if(file.type.split('/')[0] !== 'image'){
       return alert('Only image file')
     } else {
-      const task = this.storage.upload(path, file)
-      this.downloadURL = this.storage.ref(path).getDownloadURL()
-      this.uploadPercent = task.percentageChanges()
-      this.downloadURL.subscribe(url => this.image = url)
-      console.log('Image Upload');
+      const task = this.storage.upload(path, file);
+      const ref = this.storage.ref(path);
+      this.uploadPercent = task.percentageChanges();
+      console.log('Image uploaded!');
+      task.snapshotChanges().pipe(
+        finalize(() => {
+          this.downloadURL = ref.getDownloadURL()
+          this.downloadURL.subscribe(url => (this.image = url));
+        })
+      )
+      .subscribe();
     }
   }
+  
 
 }
