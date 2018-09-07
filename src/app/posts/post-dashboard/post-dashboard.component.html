@@ -10,8 +10,13 @@
       <div>
         <input type="file" name="file" id="file"
         (change)="uploadImage($event)">
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-        
+
+        <div [hidden]="!uploadPercent">
+            <mat-progress-bar mode="determinate" value="{{uploadPercent | async}}"></mat-progress-bar>
+        </div> 
+        <div [hidden]="!image">
+          <img [src]="image || '//:0'">
+        </div>  
       </div>
       
       <mat-form-field>

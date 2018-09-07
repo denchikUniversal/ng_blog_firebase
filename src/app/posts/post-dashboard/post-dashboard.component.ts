@@ -3,7 +3,6 @@ import { AuthService } from '../../core/auth.service';
 import { PostService } from '../post.service';
 import { Observable } from 'rxjs';
 import { AngularFireStorage } from 'angularfire2/storage';
-import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-post-dashboard',
@@ -54,6 +53,7 @@ export class PostDashboardComponent implements OnInit {
       this.downloadURL = this.storage.ref(path).getDownloadURL()
       this.uploadPercent = task.percentageChanges()
       this.downloadURL.subscribe(url => this.image = url)
+      console.log('Image Upload');
     }
   }
 
