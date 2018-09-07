@@ -7,7 +7,7 @@ export const environment = {
   firebase: {
     apiKey: "AIzaSyAdWbSLZ90eqVAAB3q3TKH40s-FuBFYyZo",
     authDomain: "ng-blog-189e0.firebaseapp.com",
-    databaseURL: "https://ng-blog-189e0.firebaseio.com",
+    databaseURL: "https://ng-blog-189e0.firebaseio.com/",
     projectId: "ng-blog-189e0",
     storageBucket: "ng-blog-189e0.appspot.com",
     messagingSenderId: "767418238821"
