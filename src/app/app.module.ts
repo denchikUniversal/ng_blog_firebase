@@ -15,10 +15,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { PostsModule } from './posts/posts.module';
+import { RoutingModule } from './routing.module'
 
-const routes: Routes = [
-  { path: '', redirectTo: '/blog', pathMatch: 'full' }
-]
 
 @NgModule({
   declarations: [
@@ -27,14 +25,14 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
     CoreModule,
     SharedModule,
-    PostsModule
+    PostsModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

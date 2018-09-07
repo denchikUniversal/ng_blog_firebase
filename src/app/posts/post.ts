@@ -1,8 +1,10 @@
 export class Post {
-    title: string
-    author: string
-    content: string
-    authorId: string
-    image: string
-    published: Date
+    id?: string
+  author: string
+  authorId: string
+  content: string
+  image: string
+  published: Date
+  title: string
+
 }

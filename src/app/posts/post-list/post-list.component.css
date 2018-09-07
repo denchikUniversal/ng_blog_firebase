@@ -1,7 +1,4 @@
-img{
-    max-width: 100%;
-    height: auto;
-}
+
 
 section{
     display: grid;
@@ -14,7 +11,7 @@ section{
 
 mat-card{
     margin: 10px 0;
-    max-width: 700px;
+    max-width: 400px;
     cursor: pointer;
 }
 
