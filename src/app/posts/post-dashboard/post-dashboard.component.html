@@ -33,7 +33,7 @@
         <br>
         <button mat-raised-button 
         color="accent" (click)="createPost()" 
-        [disabled]="!title || !content">{{buttonText}}</button>   
+        [disabled]="!title || !content || !image">{{buttonText}}</button>   
 
     </mat-expansion-panel>     
   </mat-accordion>

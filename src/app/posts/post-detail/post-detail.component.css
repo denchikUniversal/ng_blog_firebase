@@ -6,3 +6,7 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+mat-form-field{
+    width: 100%;
+}
