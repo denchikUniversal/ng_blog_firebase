@@ -3,6 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
 I used an Angular Material(npm install --save @angular/material @angular/cdk @angular/animations)
+>
+> 
+For start use npm install
+>
+> 
+For run porject ng serve -o
+
 
 ## Development server
 
