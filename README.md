@@ -5,10 +5,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 I used an Angular Material(npm install --save @angular/material @angular/cdk @angular/animations)
 >
 > 
-For start use npm install
+For start: npm install
 >
 > 
-For run porject ng serve -o
+For run project: ng serve -o
 
 
 ## Development server
